@@ -5,12 +5,12 @@ const mongoose = require('mongoose')
 
 module.exports = {
     async create(req, res) {
-        const userId = req.body.userId && mongoose.Types.ObjectId(req.body.userId)
+        const userId = req.body.userId && mongoose.Types.ObjectId(req.body.userId) || mongoose.Types.ObjectId('5c25077642a2a22114c4c7fa')
         const name = req.body.name
         const description = req.body.description
         const pics = req.body.pics || []
         const collection = await Collection.create({ user: userId, name, description, pics })
-
+        console.log(collection.toJSON)
         res.send(collection.toJSON())
     },
 

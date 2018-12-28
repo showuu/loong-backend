@@ -4,7 +4,7 @@ module.exports = {
     mongodb: {
         user: 'owner',
         pass: 'owner_1a2b3c',
-        useNewUrlParser: true
+        // useNewUrlParser: true
     },
     qiniu: {
         accessKey: '8NatPJ5UCP-FRBzpliKnMuZD_Cgt5ppnIVwegXsQ',

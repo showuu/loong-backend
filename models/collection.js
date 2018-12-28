@@ -26,7 +26,7 @@ const generateCollectionId = () => {
     const hour = date.getHours()
     const minute = date.getMinutes()
     const second = date.getSeconds()
-    // const milliseconds = date.getMilliseconds()
+    const milliseconds = date.getMilliseconds()
     const n = [year, month, day, hour, minute, second]
         .map((e) => formatNumberToGivenDigit(e, 2))
         .join('') + [milliseconds]
